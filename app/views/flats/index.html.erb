@@ -1,0 +1,23 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+<div class="container">
+  <h2 class="text-center">Our flats!</h2>
+  <div class="cards mt-5">
+  <% @flats.each do |flat| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= flat["imageUrl"] %>)">
+      <p>
+      <%= flat["name"] %>
+      </p>
+      <p>
+      <%= flat["price"] %><%= flat["priceCurrency"] %>
+      </p>
+      </div>
+  <% end %>
+  </div>
+</div>
